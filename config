@@ -1,0 +1,30 @@
+theme = Gruvbox Material Dark
+window-decoration = "false"
+
+font-family = "FiraCode Nerd Font SemBd"
+font-size = 14
+
+window-padding-x = 15
+window-padding-y = 15
+
+
+command = "/usr/bin/zsh -l -i"
+
+background-image = "/home/bimbok/Pictures/Wallpaper/samura.png"
+background-image-opacity = 0.15
+background-image-position = "center"
+background-image-fit = "cover"
+
+
+
+mouse-hide-while-typing = true
+cursor-style-blink = true
+
+
+background-opacity = 0.95
+
+copy-on-select = true
+
+custom-shader = "shaders/cursor_tail.glsl"
+custom-shader = "shaders/sonic_boom_cursor.glsl"
+custom-shader-animation = true

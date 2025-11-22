@@ -10,8 +10,8 @@ window-padding-y = 15
 
 command = "/usr/bin/zsh -l -i"
 
-background-image = "/home/bimbok/Pictures/Wallpaper/samura.png"
-background-image-opacity = 0.15
+background-image = "/home/bimbok/Pictures/Wallpaper/dragon.png"
+background-image-opacity = 0.35
 background-image-position = "center"
 background-image-fit = "cover"
 

@@ -12,8 +12,8 @@ window-width = 120
 
 command = "/usr/bin/zsh -l -i"
 
-background-image = "/home/bimbok/Pictures/Wallpaper/dragon.png"
-background-image-opacity = 0.15
+background-image = "/home/bimbok/Pictures/Wallpaper/sunset.png"
+background-image-opacity = 0.5
 background-image-position = "center"
 background-image-fit = "cover"
 

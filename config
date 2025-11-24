@@ -7,13 +7,13 @@ font-size = 14
 window-padding-x = 15
 window-padding-y = 15
 
-window-height = 30
-window-width = 120
+window-height = 32
+window-width = 125
 
 command = "/usr/bin/zsh -l -i"
 
 background-image = "/home/bimbok/Pictures/Wallpaper/sunset.png"
-background-image-opacity = 0.5
+background-image-opacity = 0.2
 background-image-position = "center"
 background-image-fit = "cover"
 

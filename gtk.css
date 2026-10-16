@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Ghostty Minimal GTK Tab Styling (Kitty-like Bottom Pill Layout)
+   ========================================================================== */
+
+/* Completely transparent background for all tab bar containers */
+headerbar,
+tabbar,
+tabbar tabbox,
+.tabbar {
+    background-color: transparent !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    min-height: 0px !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+/* Position and padding of the tab bar itself */
+tabbar {
+    min-height: 24px !important;
+    padding: 4px 15px !important; /* Align with window-padding-x */
+    margin-bottom: 2px !important;
+}
+
+/* Individual tab base styling */
+tabbar tabbox tab,
+.tabbar tab {
+    padding: 4px 12px !important;
+    margin: 0px !important;
+    min-height: 0px !important;
+    box-shadow: none !important;
+    border: none !important;
+    font-size: 12px !important;
+    font-family: sans-serif !important;
+    transition: all 0.15s ease !important;
+}
+
+/* Inactive tabs (Grey/Dark pill section) */
+tabbar tabbox tab,
+.tabbar tab {
+    background-color: #322826 !important; /* Matugen dark grey */
+    color: #f1dfdb !important; /* Light text */
+}
+
+/* Active tab (Light pink/white pill section) */
+tabbar tabbox tab:selected,
+.tabbar tab:selected {
+    background-color: #f1dfdb !important; /* Matugen light foreground */
+    color: #1a1110 !important; /* Dark text */
+    font-weight: bold !important;
+}
+
+/* Hovered tab */
+tabbar tabbox tab:hover,
+.tabbar tab:hover {
+    background-color: #5d3f3a !important;
+    color: #ffdad4 !important;
+}
+
+/* Rounding corners to form a unified continuous pill shape */
+
+/* Single tab open: fully rounded pill */
+tabbar tabbox tab:only-child,
+.tabbar tab:only-child {
+    border-radius: 12px !important;
+}
+
+/* First tab: round left side only */
+tabbar tabbox tab:first-child,
+.tabbar tab:first-child {
+    border-radius: 12px 0px 0px 12px !important;
+}
+
+/* Last tab: round right side only */
+tabbar tabbox tab:last-child,
+.tabbar tab:last-child {
+    border-radius: 0px 12px 12px 0px !important;
+}
+
+/* Hide tab close buttons entirely to match Kitty's clean text tabs */
+tabbar tabbox tab button,
+.tabbar tab button {
+    display: none !important;
+}
+
+/* Clean up split separators */
+separator {
+    background-color: #231817 !important;
+    min-width: 1px !important;
+    min-height: 1px !important;
+}

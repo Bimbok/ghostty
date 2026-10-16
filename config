@@ -1,32 +1,114 @@
-theme = Gruvbox Material Dark
+# ==========================================================================
+# Ghostty Configuration File
+# Optimized for Performance, Rich Features, and Matugen Theme
+# ==========================================================================
+
+# --------------------------------------------------------------------------
+# Theme & Aesthetics
+# --------------------------------------------------------------------------
+# Base color theme derived from Matugen (Material 3 color generator)
+theme = "Matugen"
+
+# Custom GTK CSS for custom styled tabs and split borders matching Matugen
+gtk-custom-css = "/home/bimbok/.config/ghostty/gtk.css"
+
+# Window transparency & compositor-level blur (smooth glassmorphism)
+background-opacity = 0.80
+background-blur = true
+
+# Ensure padding background color matches the transparent theme color
+window-padding-color = background
+
+# Slightly dim unfocused split panes to keep focus clear
+unfocused-split-opacity = 0.75
+
+# Disable titlebars & borders for a clean, modern, borderless frame
 window-decoration = "false"
 
-font-family = "FiraCode Nerd Font SemBd"
-font-size = 14
+# Minimal tab bar options like Kitty (no wide/stretching tabs, merged titlebar layout, bottom position)
+gtk-wide-tabs = false
+gtk-titlebar-style = tabs
+gtk-tabs-location = bottom
 
-window-padding-x = 15
-window-padding-y = 15
-
+# Default window size (height in rows, width in columns)
 window-height = 32
 window-width = 125
 
-command = "/usr/bin/zsh -l -i"
+# --------------------------------------------------------------------------
+# Fonts & Typography
+# --------------------------------------------------------------------------
+font-family = "FiraCode Nerd Font SemBd"
+font-size = 14
 
-background-image = "/home/bimbok/Pictures/Wallpaper/sunset.png"
-background-image-opacity = 0.2
-background-image-position = "center"
-background-image-fit = "cover"
+# Enable OpenType features (ligatures like =>, ==, !=, etc.)
+font-feature = "calt"
+font-feature = "liga"
 
+# Padding size around the text area
+window-padding-x = 15
+window-padding-y = 15
 
-
-mouse-hide-while-typing = true
+# --------------------------------------------------------------------------
+# Cursor & Mouse Interaction
+# --------------------------------------------------------------------------
+# Cursor styling and blinking configuration
+cursor-style = block
 cursor-style-blink = true
 
+# Auto-hide mouse cursor while typing to keep text visible
+mouse-hide-while-typing = true
 
-background-opacity = 0.96
+# Enable mouse-clicking to position the cursor (requires shell integration)
+cursor-click-to-move = true
 
+# Auto copy highlighted text to clipboard
 copy-on-select = true
 
+# --------------------------------------------------------------------------
+# Performance & Behavior
+# --------------------------------------------------------------------------
+# GTK performance boost: reuse existing process for instant startup
+gtk-single-instance = true
+
+# Limit memory usage of scrollback buffer (lines)
+scrollback-limit = 100000
+
+# Quiet/disable the system audio bell
+bell-features = no-audio
+
+# Enable shell integration automatically (supports prompts, history markers)
+shell-integration = detect
+shell-integration-features = cursor,sudo,no-title
+
+# Allow clipboard read/write capabilities
+clipboard-read = allow
+clipboard-write = allow
+
+# --------------------------------------------------------------------------
+# Quick Terminal Mode (Quake Dropdown)
+# --------------------------------------------------------------------------
+# Toggle terminal dropdown globally with F12
+quick-terminal-position = top
+quick-terminal-animation-duration = 0.15
+
+# --------------------------------------------------------------------------
+# Custom Keybindings
+# --------------------------------------------------------------------------
+# Vim-style navigation between split panes
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+k=goto_split:up
+keybind = ctrl+shift+l=goto_split:right
+
+# Toggle zooming the active split pane to take full screen space
+keybind = ctrl+shift+z=toggle_split_zoom
+
+# Toggle the quick (quake-style) terminal dropdown
+keybind = F12=toggle_quick_terminal
+
+# --------------------------------------------------------------------------
+# Shaders (Visual Effects)
+# --------------------------------------------------------------------------
 custom-shader = "shaders/cursor_tail.glsl"
 custom-shader = "shaders/sonic_boom_cursor.glsl"
 custom-shader-animation = true
